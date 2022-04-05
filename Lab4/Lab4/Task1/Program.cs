@@ -11,13 +11,13 @@ tv.Cost = cost;
 
 Console.WriteLine("Type the amount of purchases of TVs: ");
 int purch = int.Parse(Console.ReadLine());
-tv.Purchases = purch;
+tv.InternetShop.Purchases = purch;
 
-double earnings = tv.GetEarnings();
+double earnings = tv.InternetShop.GetEarnings();
 
 Console.WriteLine("Shop name: " + tv.InternetShop.Name);
 Console.WriteLine("Cost of a TV: " + tv.Cost);
-Console.WriteLine("Purchases of TVs: " + tv.Purchases);
+Console.WriteLine("Purchases of TVs: " + tv.InternetShop.Purchases);
 Console.WriteLine("Earnings: " + earnings.ToString());
 
 
@@ -28,20 +28,30 @@ public class InternetShop
 
     private InternetShop() {}
 
+    public TV Product { get; set; }
+
     public string Name { get; private set; }
 
-    protected InternetShop(string name)
+    public int Purchases { get; set; }
+
+    protected InternetShop(string name, TV tv)
     {
         this.Name = name;
+        Product = tv;
     }
 
-    public static InternetShop getInstance(string name)
+    public static InternetShop getInstance(string name, TV tv)
     {
         if (instance == null)
         {
-            instance = new InternetShop(name);
+            instance = new InternetShop(name, tv);
         }
         return instance;
+    }
+
+    public double GetEarnings()
+    {
+        return Product.Cost * Purchases;
     }
 }
 
@@ -51,12 +61,9 @@ public class TV
 
     public void internetShop(string name)
     {
-        InternetShop = InternetShop.getInstance(name);
+        InternetShop = InternetShop.getInstance(name, this);
     }
-    public int Purchases
-    {
-        get; set;
-    }
+    
     public double Cost
     {
         get; set;
@@ -66,10 +73,6 @@ public class TV
     {
         Cost += dcost;
         if (Cost < 0) Cost = 0;
-    }
-    public double GetEarnings()
-    {
-        return Cost * Purchases;
     }
 
 }

@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Lab6.Film">
-    <Position X="5.5" Y="1.5" Width="1.5" />
+    <Position X="5.25" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAQIBAABAAAAAgAAABAABQAAAAAAAEAAAAAAAAEAAA=</HashCode>
+      <HashCode>AgAQABAABAAAAAgAAABAABQAAAAAAAEAAAAAAAAEAAA=</HashCode>
       <FileName>Films.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab6.AdventureFilm">
-    <Position X="9.25" Y="2.5" Width="1.5" />
+    <Position X="9" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAgAAAAAAAAIAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>Films.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab6.CinemaFilm">
-    <Position X="2" Y="2.5" Width="1.5" />
+    <Position X="2.25" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIQAAAAACEQAAgAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAIQAAAAACEAAAgAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Films.cs</FileName>
     </TypeIdentifier>
   </Class>

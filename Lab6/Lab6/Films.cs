@@ -8,8 +8,7 @@ namespace Lab6
 {
     public abstract class Film
     {
-        private string _name;
-        public string Name { get { return _name; } set { _name = value; } }
+        public string Name { get; set; }
         public double Rating { get; set; }
         public string Director { get; set; }
         public int Year { get; set; }
@@ -60,8 +59,7 @@ namespace Lab6
 
     public class CinemaFilm : Film
     {
-        private string _cinema;
-        public string Cinema { get { return _cinema; } set { _cinema = value; } }
+        public string? Cinema { get; set; }
 
         public DateOnly Start { get; set; }
 
